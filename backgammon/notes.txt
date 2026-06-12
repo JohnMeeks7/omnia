@@ -1,0 +1,6 @@
+Terminal-based backgammon I made to practice object-oriented programming.
+
+To add:
+- Better display
+- Doubling Cube
+- Better interface (manim?)
