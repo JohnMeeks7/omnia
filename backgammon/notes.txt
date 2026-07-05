@@ -1,6 +1,5 @@
-Terminal-based backgammon I made to practice object-oriented programming.
+Terminal-based backgammon I made to practice object-oriented programming and to be able to play at work
 
 To add:
-- Doubling Cube
-- Better interface (manim?)
+- Doubling Cube (Done)
 - Computer opponent (easy - random, medium - prioritizes capturing pieces, hard - maximizes p(winning))
