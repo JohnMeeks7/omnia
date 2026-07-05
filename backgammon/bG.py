@@ -221,24 +221,24 @@ class gameBoard:
         print()
         print("\033[1m" + "Player 2 Home" + "\033[0m")
         print()
-        print(f"Pieces Born Off: {self.offBoard[1]}")
+        print(f"Player 2 Pieces Born Off: {self.offBoard[1]}")
         print("-"*30)
         print()
         for i in range(23, 17, -1):
-            print(f"{i}    -    {self.board[i]}")
+            print(f"{i+1}    -    {self.board[i]}")
         print()
         print(f"Player 1 Pieces on Bar: {self.bar[0]}")
         print()
         for i in range(17, 5, -1):
-            print(f"{i}    -    {self.board[i]}")
+            print(f"{i+1}    -    {self.board[i]}")
         print()
         print(f"Player 2 Pieces on Bar: {self.bar[1]}")
         print()
         for i in range(5, -1, -1):
-            print(f"{i}    -    {self.board[i]}")
+            print(f"{i+1}    -    {self.board[i]}")
         print()
         print(f"-"*30 )
-        print(f"Pieces Born Off: {self.offBoard[0]}")
+        print(f"Player 1 Pieces Born Off: {self.offBoard[0]}")
         print()
         print("\033[1m" + "Player 1 Home" + "\033[0m")
         print()
@@ -404,7 +404,9 @@ def gamePlay(scoreTotal, gB, dC, d, eG, p1, p2, firstPlayerNo, firstRoll):
                 print(f"{'Move Number':<15} {'Starting Position':<20} {'End Position':<15} {'Die Used':<10}")
                 print("-" * 60)
                 for i, move in enumerate(allMoves):
-                    print(f"{str(i):<15} {str(move[0]):<20} {str(move[1]):<15} {str(move[2]):<10}")
+                    startIndexUpdate = move[0] + 1 if isinstance(move[0], int) else move[0]
+                    endIndexUpdate = move[1] + 1 if isinstance(move[1], int) else move[1]
+                    print(f"{str(i):<15} {str(startIndexUpdate):<20} {str(endIndexUpdate):<15} {str(move[2]):<10}")
                    
                 while True:
                     try:
